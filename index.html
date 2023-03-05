@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./src/assets/main.css">
+    <link rel="stylesheet" type="text/css" href="./src/assets/range-input.css">
+    <title>Document</title>
+    <script src="https://music.yandex.ru/api/audio/dist/index.js"></script>
+</head>
+
+<body>
+    <div class="containerr">
+
+        <div class="container_header">
+            <div class="container_header_title">
+                <h1>Play any audio sources directly in the browser!</h1>
+            </div>
+            <div class="container_header_subtitle">
+                <span>Without any restrictions for free</span>
+                <span>By uploading the audio file, you agree to our <strong>Terms of Service.</strong></span>
+            </div>
+            <!-- <div class="container_header_player">
+                <div class="container_header_player_inputLink">
+                    <span>Insert the link</span>
+                    <div class="container_header_player_inputLink_input">
+                        <div class="container_header_player_inputLink_input_inputcontainer">
+                            <input type="text" placeholder="https://">
+                            <div class="container_header_player_inputLink_history ">
+                                <div class="container_header_player_inputLink_history_list">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container_header_player_inputLink_input_button">
+                            <span>→</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_header_player_turntable">
+                    <span id="backBtn">← Back</span>
+                    <div class="container_header_player_turntable_block">
+                        <img class="arrow" src="./images/play.svg" alt="">
+                        <img class="pause" src="./images/pause.svg" alt="">
+                        <input id="progresbar" min="0" max="100" step="0.5" value="0" type="range">
+                        <div class="container_header_player_turntable_block_timeAndVolume">
+                            <span class="time">00:00</span>
+                            <input id="volume" type="range" min="0" max="1" step="0.1">
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div id="container_header_player"></div>
+        </div>
+        <div class="container_body">
+            <div class="container_body_text">
+                <h1>How It Works</h1>
+                <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, ipsa excepturi. Consectetur
+                    laborum minima ut tempora vel officiis. Ullam ipsum maxime quam doloribus consequuntur enim
+                    alias repellendus soluta molestiae a?
+                    Voluptates veritatis incidunt quia nihil, praesentium eligendi pariatur magnam distinctio natus
+                    temporibus. Nisi maiores, aliquam cupiditate veritatis pariatur iusto, necessitatibus, ipsa
+                    explicabo consectetur quod nesciunt ut sunt distinctio blanditiis sapiente?
+                    Ut facere tempore consectetur quam veniam culpa molestiae, accusantium, eaque, corporis
+                    provident reiciendis excepturi beatae sint eos deserunt? Quos dignissimos tenetur quod enim a
+                    nulla est cum natus optio necessitatibus.
+
+                </span>
+            </div>
+            <img src="./images/bodyImg1.svg" alt="">
+        </div>
+        <div class="container_footer">
+            <span>Technical requirements</span>
+            <div class="container_footer_switchers">
+                <span class="Own server  active">Own server</span>
+                <span class="Amazon Instanse">Amazon Instanse</span>
+            </div>
+
+
+
+            <div id="Own server" class="container_footer_content">
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        OS + apps
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        Unix/OSX + docker + nvidia-docker
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        Free space
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        100 GB of free space
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        CPU
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        4 cores or more (e.g. intel core i5)
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        Graphics hardware
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        GPU: NVidia only 2Gb+
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        Memory
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        16 GB RAM
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="AmazonInstanse" class="container_footer_content">
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        Instance
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        g4sn.xlarge
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        Memory
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        16 GB RAM
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        GPU
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        1
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        Storage
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        125 GB
+                    </div>
+                </div>
+
+                <div class="container_footer_content_item">
+                    <div class="container_footer_content_item_mini_item">
+                        vCPUs
+                    </div>
+                    <div class="container_footer_content_item_mini_item">
+                        4
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./script/main.js"></script>
+    <script type="module" src="./src/main.jsx"></script>
+
+</body>
+
+</html>
