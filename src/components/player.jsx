@@ -1,5 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Slider from '@mui/material/Slider';
+
+import union from '../images/union.svg'
+import playImg from'../images/play.svg'
+import pauseImg from '../images/pause.svg'
+
+
 const Player = ({ changeSwitcher, playerSrc, openError }) => {
     const audio = useRef(null)
     const video = useRef(null)
@@ -119,11 +125,11 @@ const Player = ({ changeSwitcher, playerSrc, openError }) => {
             <div className="container_header_player_turntable_block">
 
                 <div className='container_header_player_turntable_block_buttons'>
-                    {!iconSwitcher && <img className="arrow" src="./images/play.svg" alt="" onClick={() => audio.current.play()} />}
-                    {iconSwitcher && <img className="pause" src="./images/pause.svg" alt="" onClick={() => audio.current.pause()} />}
+                    {!iconSwitcher && <img className="arrow" src={playImg} alt="playImg" onClick={() => audio.current.play()} />}
+                    {iconSwitcher && <img className="pause" src={pauseImg} alt="pauseImg" onClick={() => audio.current.pause()} />}
 
                     <div className='container_header_player_turntable_block_buttons_union'>
-                        <img onClick={() => setMenu(!speedMenu)} src="./images/union.svg" alt="union" />
+                        <img onClick={() => setMenu(!speedMenu)} src={union} alt="union" />
                         {speedMenu && <div className='container_header_player_turntable_block_buttons_union_speed'>
                             {[0.5, 1, 1.5].map(x => <span key={x} onClick={() => setSpeed(x)} className={audioSpeed === x ? 'active' : ''}>{x}</span>)}
 

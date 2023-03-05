@@ -1,9 +1,13 @@
 import { useState, useRef, useEffect } from 'react'
 
-import './assets/main.css'
+// import './assets/main.css'
 
 import Player from './components/player'
 import Input from './components/input'
+
+import errorImg  from './images/error_icon.svg'
+import errorCloseImg from './images/error_close.svg'
+
 
 function App() {
   const [switcher, setSwitch] = useState(false)
@@ -42,7 +46,6 @@ function App() {
     setVision(false)
   }
 
-
   function changeSwitcher(bool, src, historyList) {
     setSwitch(bool)
     if (src) setSrc(src)
@@ -52,20 +55,18 @@ function App() {
   }
 
 
-
-
   return (
     <>
       {!switcher && <Input changeSwitcher={changeSwitcher} openError={openError} closeError={closeError} />}
       {switcher && <Player changeSwitcher={changeSwitcher} openError={openError} playerSrc={playerSrc} />}
 
       <div ref={error} className="container_header_player_turntable_error">
-        <img src="./images/error_icon.svg" alt="error" />
+        <img src={errorImg} alt="error" />
         <div className="container_header_player_turntable_error_content">
           <strong>Warning</strong>
           <span id="errorText">{errorMeesage}</span>
         </div>
-        <img onClick={() => setVision(false)} id="errorClose" src="./images/error_close.svg" alt="error_off" />
+        <img onClick={() => setVision(false)} id="errorClose" src={errorCloseImg} alt="error_off" />
       </div>
     </>
 

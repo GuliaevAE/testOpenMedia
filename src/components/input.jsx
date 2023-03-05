@@ -20,11 +20,7 @@ const Input = ({ changeSwitcher, openError, closeError }) => {
             setNewSrc(e.target.value)
         }
     }
-    // if (e.target.value) {
-    //     history.current.classList.toggle('active')
-    // }else{
-    //     history.current.classList.remove('active')
-    // }
+    
     return (
         <div className="container_header_player_inputLink">
             <span>Insert the link</span>
