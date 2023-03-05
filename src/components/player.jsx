@@ -3,7 +3,7 @@ import Slider from '@mui/material/Slider';
 
 import union from '../images/union.svg'
 import playImg from'../images/play.svg'
-import pauseImg from '../images/pause.svg'
+import pauseImg from '../images/Pause.svg'
 
 
 const Player = ({ changeSwitcher, playerSrc, openError }) => {
