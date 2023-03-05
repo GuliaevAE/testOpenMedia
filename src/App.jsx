@@ -1,11 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-// import './App.css'
+
 import './assets/main.css'
-import './assets/range-input.css'
+
 import Player from './components/player'
 import Input from './components/input'
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   const [switcher, setSwitch] = useState(false)
   const [playerSrc, setSrc] = useState('')
