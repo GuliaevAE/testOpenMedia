@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Slider from '@mui/material/Slider';
 
 import union from '../images/union.svg'
-import playImg from'../images/play.svg'
+import playImg from '../images/play.svg'
 import pauseImg from '../images/Pause.svg'
 
 
@@ -79,7 +79,8 @@ const Player = ({ changeSwitcher, playerSrc, openError }) => {
     }
 
     function changeAudioCurrenttime(e) {
-        audio.current.currentTime = Number(e.target.value / 100 * audio.current.duration)
+        if (audio.current.currentTime)
+            audio.current.currentTime = Number(e.target.value / 100 * audio.current.duration)
         let min = e.target.getAttribute("min");
         e.target.style.setProperty("--val", (e.target.value - min));
     }
